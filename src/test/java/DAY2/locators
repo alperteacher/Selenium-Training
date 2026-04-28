@@ -1,0 +1,23 @@
+
+
+
+
+
+Locator bulma seçenekleri 8 adet :
+
+1- id ile bulma
+
+    Devtools ta arama yaparken başına hashtag, css selector de aranırkende başına hashtag koyulur.
+    Web elementinin içerisindeki attribute lardan id olanı bulunur ve değeri alınır.
+
+    bu değer, seçtiğimiz elementin id sidir.
+
+    java selenium ile By.id("") kullanılırken başına hashtag koyulmaz
+
+2- name ile bulma
+3- class name ile bulma
+4- link texti ile bulma
+5- linkin textinin bir parçası ile bulma
+6- tag ile bulma
+7- css selector
+8- xpath
