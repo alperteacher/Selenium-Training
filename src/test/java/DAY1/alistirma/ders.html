@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<!-- DOCTYPE: Tarayıcıya bu dosyanın HTML5 olduğunu söyler -->
+
+<html lang="tr">
+<!-- html: Sayfanın tamamını saran ana etiket. lang="tr" dil bilgisi verir -->
+
+<head>
+  <!-- head: Sayfanın görünmeyen bilgileri burada. Başlık, stil, meta gibi şeyler -->
+
+  <meta charset="UTF-8">
+  <!-- meta charset: Türkçe karakterlerin (ş, ğ, ü, ö...) düzgün görünmesi için -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- meta viewport: Mobil cihazlarda sayfanın düzgün ölçeklenmesi için -->
+
+  <meta name="description" content="HTML ve CSS öğrenmek için hazırlanmış örnek sayfa">
+  <!-- meta description: Google gibi arama motorlarının sayfayı tanımlaması için -->
+
+  <meta name="author" content="Öğretmen">
+  <!-- meta author: Sayfanın yazarını belirtir -->
+
+  <title>HTML & CSS Ders Dosyası</title>
+  <!-- title: Tarayıcı sekmesinde görünen başlık -->
+
+  <link rel="stylesheet" href="ders.css">
+  <!-- link: Dış CSS dosyasını sayfaya bağlar. href = dosyanın yolu -->
+
+</head>
+
+<body>
+  <!-- body: Kullanıcının ekranda gördüğü her şey buraya yazılır -->
+
+
+  <!-- ============================================================ -->
+  <!--   1. BAŞLIKLAR (Headings)                                    -->
+  <!-- ============================================================ -->
+
+  <h1 id="ana-baslik">Bu bir H1 Başlıktır — En büyük başlık</h1>
+  <!-- h1: Sayfada yalnızca 1 tane olmalı. SEO için önemli -->
+
+  <h2>Bu bir H2 Başlıktır — Bölüm başlığı</h2>
+  <h3>Bu bir H3 Başlıktır — Alt bölüm başlığı</h3>
+  <h4>Bu bir H4 Başlıktır</h4>
+  <h5>Bu bir H5 Başlıktır</h5>
+  <h6>Bu bir H6 Başlıktır — En küçük başlık</h6>
+  <!-- h1'den h6'ya kadar 6 seviye başlık vardır -->
+
+
+  <!-- ============================================================ -->
+  <!--   2. PARAGRAF VE METİN ETİKETLERİ                           -->
+  <!-- ============================================================ -->
+
+  <p id="ilk-paragraf">
+    Bu bir paragraf etiketidir. İçine uzun metin yazılır.
+    HTML'de enter'a bassanız bile tarayıcıda yeni satıra geçmez,
+    bunun için br etiketi kullanılır.
+  </p>
+  <!-- p: Paragraf. Otomatik olarak üstte ve altta boşluk bırakır -->
+
+  <p>
+    Metni <strong>kalın yapmak</strong> için strong etiketi kullanılır.
+    Metni <em>italik yapmak</em> için em etiketi kullanılır.
+    Metni <u>altı çizmek</u> için u etiketi kullanılır.
+    Metni <s>üstü çizmek</s> için s etiketi kullanılır.
+    Metni <mark>sarı highlight</mark> yapmak için mark etiketi kullanılır.
+    <small>Küçük yazı için small etiketi.</small>
+    <sub>Alt simge</sub> için sub,
+    <sup>Üst simge</sup> için sup kullanılır. (örn: x<sup>2</sup>)
+  </p>
+
+  <p>
+    Birinci satır.<br>
+    br etiketi ile yeni satıra geçildi. br kapanmaz, tek başına kullanılır.
+  </p>
+  <!-- br: Satır sonu (line break). Kapanış etiketi yoktur -->
+
+  <hr>
+  <!-- hr: Yatay çizgi (horizontal rule). Bölümleri ayırmak için kullanılır -->
+
+  <blockquote id="alinti">
+    "Bu bir alıntı metnidir. Genellikle biraz içeriden başlar."
+    — Ünlü Biri
+  </blockquote>
+  <!-- blockquote: Alıntı metni. Görsel olarak içeriden başlar -->
+
+  <pre>
+    Bu metin
+        olduğu gibi
+    görünür.    Boşluklar korunur.
+  </pre>
+  <!-- pre: Preformatted. Yazdığınız gibi gösterir, boşlukları korur -->
+
+  <code>print("Merhaba Dünya")</code>
+  <!-- code: Kod parçası göstermek için. Genellikle sabit genişlikli font kullanır -->
+
+  <p>
+    <abbr title="HyperText Markup Language">HTML</abbr> öğreniyoruz.
+  </p>
+  <!-- abbr: Kısaltmalar için. title ile açık yazılışını verebilirsiniz -->
+
+
+  <!-- ============================================================ -->
+  <!--   3. LİSTELER                                                -->
+  <!-- ============================================================ -->
+
+  <h2>Sırasız Liste (ul)</h2>
+  <ul id="sirali-olmayan-liste">
+    <!-- ul: Unordered List — maddeli liste (nokta ile) -->
+    <li>Elma</li>
+    <li>Armut</li>
+    <li>
+      Meyve Sepeti
+      <ul>
+        <!-- ul içinde ul: İç içe (nested) liste -->
+        <li>Çilek</li>
+        <li>Kivi</li>
+      </ul>
+    </li>
+  </ul>
+  <!-- li: List Item — her madde için kullanılır -->
+
+  <h2>Sıralı Liste (ol)</h2>
+  <ol id="sirali-liste">
+    <!-- ol: Ordered List — numaralı liste -->
+    <li>Birinci adım</li>
+    <li>İkinci adım</li>
+    <li>Üçüncü adım</li>
+  </ol>
+
+  <h2>Tanım Listesi (dl)</h2>
+  <dl id="tanim-listesi">
+    <!-- dl: Definition List — terim ve açıklama listesi -->
+    <dt>HTML</dt>
+    <!-- dt: Definition Term — tanımlanacak kelime -->
+    <dd>Sayfa yapısını oluşturmak için kullanılan dil</dd>
+    <!-- dd: Definition Description — kelimenin açıklaması -->
+    <dt>CSS</dt>
+    <dd>Sayfanın görsel tasarımını yapan dil</dd>
+  </dl>
+
+
+  <!-- ============================================================ -->
+  <!--   4. BAĞLANTILAR (Links)                                     -->
+  <!-- ============================================================ -->
+
+  <h2>Bağlantılar</h2>
+
+  <a href="https://www.google.com">Google'a git (aynı sekmede)</a>
+  <!-- a: Anchor — bağlantı etiketi. href = gidilecek adres -->
+
+  <br>
+
+  <a href="https://www.youtube.com" target="_blank">YouTube'u yeni sekmede aç</a>
+  <!-- target="_blank": Bağlantıyı yeni sekmede açar -->
+
+  <br>
+
+  <a href="mailto:ornek@gmail.com">E-posta gönder</a>
+  <!-- mailto: Tıklanınca e-posta programını açar -->
+
+  <br>
+
+  <a href="tel:+905001234567">Telefon et</a>
+  <!-- tel: Mobilde tıklanınca arama yapar -->
+
+  <br>
+
+  <a href="#ana-baslik">Sayfanın başına git (iç bağlantı)</a>
+  <!-- # ile sayfadaki bir id'ye bağlantı verilir -->
+
+  <br>
+
+  <a href="sayfa2.html">Başka bir sayfaya git</a>
+  <!-- Yerel dosyaya bağlantı: aynı klasördeki başka bir HTML dosyası -->
+
+
+  <!-- ============================================================ -->
+  <!--   5. GÖRSELLER                                               -->
+  <!-- ============================================================ -->
+
+  <h2>Görseller</h2>
+
+  <img
+    src="https://via.placeholder.com/300x200"
+    alt="300x200 boyutunda örnek resim"
+    width="300"
+    height="200"
+    id="ornek-resim"
+    class="resim"
+  >
+  <!-- img: Resim etiketi. Kapanış etiketi yoktur.
+       src  = resmin yolu veya adresi
+       alt  = resim yüklenemezse çıkan metin (erişilebilirlik için şart)
+       width/height = piksel cinsinden boyut -->
+
+  <br>
+
+  <figure id="resim-sekil">
+    <!-- figure: Resim + açıklama birlikte kullanmak için -->
+    <img src="https://via.placeholder.com/200x150" alt="Küçük örnek resim" class="resim">
+    <figcaption>Bu resmin açıklama yazısıdır.</figcaption>
+    <!-- figcaption: figure içindeki resmin alt yazısı -->
+  </figure>
+
+
+  <!-- ============================================================ -->
+  <!--   6. TABLO                                                   -->
+  <!-- ============================================================ -->
+
+  <h2>Tablo</h2>
+
+  <table id="ornek-tablo" class="tablo">
+    <!-- table: Tablo etiketi -->
+
+    <caption>Öğrenci Notları</caption>
+    <!-- caption: Tablonun başlığı -->
+
+    <thead>
+      <!-- thead: Tablonun başlık satırları bölümü -->
+      <tr>
+        <!-- tr: Table Row — bir satır -->
+        <th>Ad Soyad</th>
+        <th>Ders</th>
+        <th>Not</th>
+        <!-- th: Table Header — başlık hücresi, kalın ve ortalı çıkar -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- tbody: Tablonun veri satırları bölümü -->
+      <tr>
+        <td>Ali Yılmaz</td>
+        <td>HTML</td>
+        <td>95</td>
+        <!-- td: Table Data — veri hücresi -->
+      </tr>
+      <tr>
+        <td>Ayşe Kaya</td>
+        <td>CSS</td>
+        <td>88</td>
+      </tr>
+      <tr>
+        <td colspan="2">Ortalama</td>
+        <!-- colspan: Birden fazla sütunu birleştirir -->
+        <td>91.5</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <!-- tfoot: Tablonun alt bölümü (özet satırları için) -->
+      <tr>
+        <td colspan="3">Tablo sonu</td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+
+  <!-- ============================================================ -->
+  <!--   7. FORM                                                    -->
+  <!-- ============================================================ -->
+
+  <h2>Form Elemanları</h2>
+
+  <form id="ornek-form" action="#" method="get" class="form">
+    <!-- form: Form etiketi
+         action = formun gönderileceği adres
+         method = get (URL'de görünür) veya post (gizli gönderilir) -->
+
+    <!-- METİN ALANLARI -->
+
+    <label for="ad">Adınız:</label>
+    <input type="text" id="ad" name="ad" placeholder="Adınızı girin" required>
+    <br><br>
+    <!-- label: Etiket — for değeri, input'un id'si ile eşleşmeli
+         input type="text": Tek satır metin kutusu
+         placeholder: İçi boşken görünen açıklama metni
+         required: Zorunlu alan -->
+
+    <label for="email">E-posta:</label>
+    <input type="email" id="email" name="email" placeholder="ornek@mail.com">
+    <br><br>
+    <!-- type="email": E-posta formatını kontrol eder -->
+
+    <label for="sifre">Şifre:</label>
+    <input type="password" id="sifre" name="sifre" placeholder="Şifreniz">
+    <br><br>
+    <!-- type="password": Karakterleri gizler -->
+
+    <label for="yas">Yaş:</label>
+    <input type="number" id="yas" name="yas" min="1" max="120" value="18">
+    <br><br>
+    <!-- type="number": Sadece sayı girişi. min/max sınır koyar -->
+
+    <label for="dogum">Doğum Tarihi:</label>
+    <input type="date" id="dogum" name="dogum">
+    <br><br>
+    <!-- type="date": Takvim açar -->
+
+    <label for="renk">Renk Seçin:</label>
+    <input type="color" id="renk" name="renk" value="#ff0000">
+    <br><br>
+    <!-- type="color": Renk seçici açar -->
+
+    <label for="ses">Ses Seviyesi:</label>
+    <input type="range" id="ses" name="ses" min="0" max="100" value="50">
+    <br><br>
+    <!-- type="range": Kaydırma çubuğu -->
+
+    <label for="arama">Arama:</label>
+    <input type="search" id="arama" name="arama" placeholder="Arayın...">
+    <br><br>
+    <!-- type="search": Arama kutusu, sağında silme (x) butonu çıkar -->
+
+    <!-- BÜYÜK METİN ALANI -->
+
+    <label for="mesaj">Mesajınız:</label><br>
+    <textarea id="mesaj" name="mesaj" rows="4" cols="40" placeholder="Mesajınızı buraya yazın..."></textarea>
+    <br><br>
+    <!-- textarea: Çok satırlı metin alanı
+         rows = kaç satır yüksekliğinde başlar
+         cols = kaç karakter genişliğinde başlar -->
+
+    <!-- SEÇİM KUTULARI -->
+
+    <label for="sehir">Şehir Seçin:</label>
+    <select id="sehir" name="sehir">
+      <!-- select: Açılır liste (dropdown) -->
+      <option value="">-- Seçiniz --</option>
+      <!-- option: Her seçenek. value = form gönderildiğinde giden değer -->
+      <option value="istanbul">İstanbul</option>
+      <option value="ankara" selected>Ankara</option>
+      <!-- selected: Sayfa açıldığında seçili gelen seçenek -->
+      <option value="izmir">İzmir</option>
+    </select>
+    <br><br>
+
+    <!-- RADIO BUTONLAR -->
+
+    <p>Cinsiyetiniz:</p>
+    <input type="radio" id="erkek" name="cinsiyet" value="erkek">
+    <label for="erkek">Erkek</label>
+
+    <input type="radio" id="kadin" name="cinsiyet" value="kadin">
+    <label for="kadin">Kadın</label>
+    <br><br>
+    <!-- type="radio": Tek seçim. Aynı name ile gruplandırılır -->
+
+    <!-- ONAY KUTULARI -->
+
+    <p>İlgi Alanları:</p>
+    <input type="checkbox" id="html" name="ilgi" value="html" checked>
+    <label for="html">HTML</label>
+
+    <input type="checkbox" id="css" name="ilgi" value="css">
+    <label for="css">CSS</label>
+
+    <input type="checkbox" id="js" name="ilgi" value="js">
+    <label for="js">JavaScript</label>
+    <br><br>
+    <!-- type="checkbox": Birden fazla seçilebilir
+         checked: Başta işaretli geliyor -->
+
+    <!-- BUTONLAR -->
+
+    <button type="submit" id="gonder-btn" class="buton">Formu Gönder</button>
+    <!-- type="submit": Formu gönderir -->
+
+    <button type="reset" class="buton">Sıfırla</button>
+    <!-- type="reset": Formdaki tüm alanları temizler -->
+
+    <button type="button" class="buton">Sıradan Buton</button>
+    <!-- type="button": Hiçbir şey yapmaz, JavaScript ile kullanılır -->
+
+    <input type="submit" value="Input ile Gönder" class="buton">
+    <!-- input type="submit": button ile aynı işi yapar ama eski yöntem -->
+
+  </form>
+
+
+  <!-- ============================================================ -->
+  <!--   8. YAPI ETİKETLERİ (Semantic HTML5)                       -->
+  <!-- ============================================================ -->
+
+  <h2>Semantik (Anlamlı) Yapı Etiketleri</h2>
+
+  <!-- Semantik etiketler hem insanlar hem de arama motorları için anlam taşır -->
+
+  <header id="sayfa-header" class="header">
+    <!-- header: Sayfanın veya bölümün üst kısmı. Logo, menü genelde buraya girer -->
+    <h1>Sitenin Adı</h1>
+    <p>Sitenin sloganı buraya gelir.</p>
+  </header>
+
+  <nav id="menu" class="menu">
+    <!-- nav: Navigasyon menüsü. Sayfa içi veya sayfalar arası bağlantılar -->
+    <a href="#">Ana Sayfa</a> |
+    <a href="#">Hakkımda</a> |
+    <a href="#">İletişim</a>
+  </nav>
+
+  <main id="icerik" class="icerik">
+    <!-- main: Sayfanın ana içeriği. Sayfada yalnızca 1 tane olmalı -->
+
+    <section id="hakkimda" class="bolum">
+      <!-- section: Tematik bir bölüm. Genellikle kendi başlığı olur -->
+      <h2>Hakkımda</h2>
+      <p>Bu bölümde kişiyle ilgili bilgiler yer alır.</p>
+    </section>
+
+    <article id="blog-yazisi" class="yazi">
+      <!-- article: Bağımsız, paylaşılabilir içerik. Blog yazısı, haber gibi -->
+      <h2>Blog Yazısı Başlığı</h2>
+      <p>Bu bir blog yazısı içeriğidir. article etiketi kullanılır.</p>
+    </article>
+
+    <aside id="kenar-cubugu" class="kenar">
+      <!-- aside: Ana içerikle ilgili ama ikincil bilgi. Yan panel, widget -->
+      <h3>Reklamlar / İlgili Linkler</h3>
+      <p>Kenar çubuğu içeriği burada.</p>
+    </aside>
+
+  </main>
+
+  <footer id="sayfa-footer" class="footer">
+    <!-- footer: Sayfanın alt kısmı. Telif hakkı, iletişim gibi bilgiler -->
+    <p>&copy; 2024 Tüm hakları saklıdır.</p>
+    <!-- &copy; HTML karakter kodu: © sembolü -->
+    <p>&hearts; ile yapıldı &mdash; HTML Dersi</p>
+    <!-- &hearts; = ♥   &mdash; = —   gibi özel karakterler -->
+  </footer>
+
+
+  <!-- ============================================================ -->
+  <!--   9. GENEL KAPSAYICI ETİKETLER                              -->
+  <!-- ============================================================ -->
+
+  <h2>div ve span Etiketleri</h2>
+
+  <div id="kutu" class="kutu">
+    <!-- div: Division — blok seviyede kapsayıcı. CSS ile şekillendirmek için -->
+    <p>Bu div içindeki bir paragraftır.</p>
+
+    <div class="ic-kutu">
+      <!-- div içinde div: iç içe kapsayıcılar -->
+      <p>Bu da iç içe bir div'dir.</p>
+    </div>
+  </div>
+
+  <p>
+    Bu cümlede <span id="vurgulu" class="vurgu">sadece bu kısım</span> farklı renklendirilmiştir.
+  </p>
+  <!-- span: Satır içi kapsayıcı. Metnin bir bölümünü hedeflemek için -->
+
+
+  <!-- ============================================================ -->
+  <!--   10. MEDYA ETİKETLERİ                                      -->
+  <!-- ============================================================ -->
+
+  <h2>Medya Etiketleri</h2>
+
+  <!-- VIDEO -->
+  <video id="ornek-video" class="medya" width="320" height="240" controls>
+    <!-- video: Video oynatıcı
+         controls: Oynat/duraklat/ses gibi kontrolleri gösterir
+         autoplay: Otomatik başlatır (muted ile birlikte kullanılmalı)
+         loop: Bittikçe tekrar oynatır
+         muted: Sessiz başlatır -->
+    <source src="video.mp4" type="video/mp4">
+    <!-- source: Farklı tarayıcılar için farklı format desteği -->
+    Tarayıcınız video etiketini desteklemiyor.
+    <!-- Etiket desteklenmiyorsa bu metin çıkar -->
+  </video>
+
+  <br>
+
+  <!-- SES -->
+  <audio id="ornek-ses" class="medya" controls>
+    <!-- audio: Ses oynatıcı. controls ile oynat/duraklat görünür -->
+    <source src="ses.mp3" type="audio/mpeg">
+    Tarayıcınız ses etiketini desteklemiyor.
+  </audio>
+
+  <br>
+
+  <!-- IFRAME -->
+  <iframe
+    id="ornek-iframe"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=28.9,41.0,29.1,41.1"
+    width="400"
+    height="300"
+    title="Harita"
+    class="iframe"
+  ></iframe>
+  <!-- iframe: Başka bir sayfayı veya içeriği sayfanızın içine gömer
+       title: Erişilebilirlik için zorunlu -->
+
+
+  <!-- ============================================================ -->
+  <!--   11. ÖZEL HTML KARAKTERLERİ                                -->
+  <!-- ============================================================ -->
+
+  <h2>Özel Karakterler</h2>
+  <p>
+    &lt; = küçüktür işareti (less than)<br>
+    &gt; = büyüktür işareti (greater than)<br>
+    &amp; = & sembolü (ampersand)<br>
+    &nbsp; = bölünmez boşluk (non-breaking space)<br>
+    &copy; = © telif hakkı<br>
+    &reg; = ® tescilli marka<br>
+    &trade; = ™ ticari marka<br>
+    &euro; = € euro<br>
+    &pound; = £ sterlin<br>
+    &mdash; = — uzun çizgi<br>
+    &ndash; = – kısa çizgi<br>
+    &hearts; = ♥ kalp<br>
+    &star; = ✦ yıldız
+  </p>
+
+
+  <!-- ============================================================ -->
+  <!--   12. DETAY ve ÖZET ETİKETLERİ                             -->
+  <!-- ============================================================ -->
+
+  <h2>Açılıp Kapanan İçerik</h2>
+
+  <details id="gizli-bilgi">
+    <!-- details: Tıklanınca açılan/kapanan içerik -->
+    <summary>Tıklayın — Buraya bakın!</summary>
+    <!-- summary: details içinde görünen başlık -->
+    <p>Bu gizli içerik, summary'e tıklayınca açılır. JavaScript gerekmez!</p>
+  </details>
+
+
+  <!-- ============================================================ -->
+  <!--   13. PROGRESS ve METER                                     -->
+  <!-- ============================================================ -->
+
+  <h2>İlerleme Çubukları</h2>
+
+  <label>HTML Bilgisi:</label>
+  <progress id="ilerleme" value="70" max="100"></progress> 70%
+  <!-- progress: Yükleme veya tamamlanma çubuğu -->
+
+  <br><br>
+
+  <label>Disk Kullanımı:</label>
+  <meter id="disk" value="6" min="0" max="10" low="3" high="8" optimum="5"></meter> 6/10 GB
+  <!-- meter: Belirli aralıkta bir değeri gösterir (ısı, doluluk gibi) -->
+
+
+  <!-- ============================================================ -->
+  <!--   14. ADRES ve ZAMAN ETİKETLERİ                            -->
+  <!-- ============================================================ -->
+
+  <address id="iletisim-adresi">
+    <!-- address: İletişim bilgileri için. Genellikle italik görünür -->
+    Yazar: <strong>Öğretmen Adı</strong><br>
+    E-posta: <a href="mailto:ogretmen@okul.edu.tr">ogretmen@okul.edu.tr</a><br>
+    Okul: HTML Lisesi
+  </address>
+
+  <p>
+    Ders tarihi: <time datetime="2024-09-01">1 Eylül 2024</time>
+  </p>
+  <!-- time: Tarih/saat bilgisi. datetime makine tarafından okunur -->
+
+
+  <!-- ============================================================ -->
+  <!--   YORUM SATIRI                                               -->
+  <!-- ============================================================ -->
+
+  <!-- Bu bir HTML yorum satırıdır. Tarayıcıda görünmez.
+       Birden fazla satır da yazılabilir.
+       Kodu açıklamak veya geçici olarak kapatmak için kullanılır. -->
+
+
+</body>
+<!-- body kapandı -->
+
+</html>
+<!-- html kapandı -->
