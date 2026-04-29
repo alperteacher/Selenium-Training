@@ -14,10 +14,5 @@ Locator bulma seçenekleri 8 adet :
 
     java selenium ile By.id("") kullanılırken başına hashtag koyulmaz
 
-2- name ile bulma
-3- class name ile bulma
-4- link texti ile bulma
-5- linkin textinin bir parçası ile bulma
-6- tag ile bulma
-7- css selector
-8- xpath
+    bir web sayfasında aynı ID den sadece 1 tane olur
+

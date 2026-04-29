@@ -26,6 +26,5 @@ public class Main {
         WebElement cartButton = driver.findElement(By.id("shopping_cart_container"));
         cartButton.click();
 
-
     }
 }

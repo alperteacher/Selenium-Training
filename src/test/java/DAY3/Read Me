@@ -1,0 +1,52 @@
+
+----------------------------------------
+Thread.sleep("x")
+
+x yerine milisaniye cinsinden saniye değeri yazılır. örn : 3000 = 3sn
+çekirdeği belirli saniye kadar uyutur, süre dolduktan sonra işlemler devam eder
+----------------------------------------
+driver.findElements() fonksiyonu bir web element listesi döndürür
+List<WebElement> degiskenAdi = driver.findElements(By...);
+
+şeklinde kullanılır, birden fazla elementi elde tutmaya ve işlemler yapmaya yarar
+----------------------------------------
+element.getText() methodu elementin html içerisindeki textini verir.
+----------------------------------------
+NoSuchElementException Hatası elementin bulunmadığı anlamına gelir
+----------------------------------------
+
+element.getAttribute("attribute") -> elementin verilen attribute taki değerini döndürür.
+----------------------------------------
+2- name ile bulma
+
+driver.findElement(By.name("x"))
+
+kullanılarak element bulunur. By dan sonra name yazılır.
+Name attribute u html de elementlerin içerisindedir
+----------------------------------------
+3- class name ile bulma
+
+driver.findElement(By.className("x"))
+kullanılarak element bulunur. By dan sonra className yazılır.
+className attribute u html de elementlerin içerisindedir
+----------------------------------------
+4- link texti ile bulma
+
+driver.findElements(By.linkText("x"))
+
+linkText bir a etiketli elementin textini kullanarak, elementi bulmamızı sağlar
+----------------------------------------
+5- linkin textinin bir parçası ile bulma
+
+driver.findElements(By.partialLinkText("x"))
+
+partialLinkText bir a etiketli elementin textinin bir kısmını kullanarak, elementi bulmamızı sağlar
+
+-----------------------------------------
+6- tag ile bulma
+
+elementin tag ini kullanarak driver a tanımlamaya yarar.
+-----------------------------------------
+
+7- css selector
+8- xpath
