@@ -1,0 +1,15 @@
+
+Basic Selector :
+
+ etiket[attribute='değer'][attribute='değer']
+2 attribute kullanarak bir element seçmeye yarar
+
+ # = id -> #attribute
+id si attribute olan elementi döndürür
+
+ . = class -> .attribute.attribute.attribute
+ class attribute olan elementi döndürür
+
+ Children Element bulma :
+ element > element
+ element (boşluk)
