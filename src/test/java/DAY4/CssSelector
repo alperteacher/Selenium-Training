@@ -1,7 +1,7 @@
 
 Basic Selector :
 
- etiket[attribute='değer'][attribute='değer']
+ etiket[attributeKey='attributeValue'][attributeKey='attributeValue']
 2 attribute kullanarak bir element seçmeye yarar
 
  # = id -> #attribute
@@ -10,6 +10,50 @@ id si attribute olan elementi döndürür
  . = class -> .attribute.attribute.attribute
  class attribute olan elementi döndürür
 
- Children Element bulma :
- element > element
- element (boşluk)
+^  :
+etiket[attributeKey^="attributeValue"] ---> Syntax
+Attribute değerini .startsWith() olarak algılar
+
+$  :
+etiket[attributeKey$="attributeValue"] ---> Syntax
+Attribute değerini .endsWith() olarak algılar
+
+* :
+etiket[attributeKey*="attributeValue"] ---> Syntax
+Value yi element attributeların içerisinde arar
+---------------------------------------------------------------------------
+Child & Sibling
+---------------------------------------------------------------------------
+Parent elementten tüm child lar bulunabilir, fakat child elementten parent element bulunamaz (CSS SELECTOR İÇİN)
+Child elementten diğer child kardeş element bulunabilir
+
+> -> direct child
+etiket > etiket --> Sadece elementin altındaki childları getirir
+
+() -> child or subchild
+etiket (boşluk) etiket --> Elementin altındaki tüm childları getirir
+
+:first-child
+etiket > :first-child --> Parent elementin, ilk child ını verir
+
+:last-child
+etiket > :lastfirst-child --> Parent elementin, son child ını verir
+
+:nth-child("sayı")
+etiket > :nth-child(4) --> Parent elementin, 4. child ını verir
+
+:nth-last-child("sayı")
+etiket > :nth-last-child(4) --> Parent elementin, sondan 4. child ını verir
+
+:first-of-type
+parentElement > etiket:first-of-type
+Parent elementin altındaki, verilen etiketteki 1. elementi getirir
+
+:last-of-type
+parentElement > etiket:last-of-type
+Parent elementin altındaki, verilen etiketteki sonuncu elementi getirir
+
+:nth-of-type("sayı")
+parentElement > etiket:nth-of-type
+Parent elementin altındaki, verilen etiketteki sayıncı elementi getirir
+
