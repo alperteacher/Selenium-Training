@@ -30,6 +30,9 @@ public class LCWCase {
 
         System.out.println(driver.findElement(By.id("radix-4")).getText());
 
+        System.out.println(driver.findElement(By.id("radix-4")).getCssValue("font-size"));
+
+
         driver.quit();
 
     }

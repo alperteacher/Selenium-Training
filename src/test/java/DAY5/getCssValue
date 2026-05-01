@@ -1,0 +1,1 @@
+webElement.getCssValue("css attribute") ----> css attribute un değerini döner
