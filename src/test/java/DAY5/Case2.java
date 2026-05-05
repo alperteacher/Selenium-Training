@@ -11,14 +11,16 @@ public class Case2 {
         driver.get("https://www.amazon.com.tr");
 
 
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         driver.findElement(By.id("nav-hamburger-menu")).click();
         Thread.sleep(3000);
         driver.findElement(By.cssSelector("[data-menu-id=\"2\"]:nth-child(1)")).click();
         Thread.sleep(5000);
-        driver.findElement(By.cssSelector("div[data-menu-id=\"2\"] > section > ul > li:first-child > a")).click();
+        driver.findElement(By.cssSelector("(//a[text()=\"Sneaker\"])[1]")).click();
 
+
+        Thread.sleep(2000);
 
 
         driver.quit();
