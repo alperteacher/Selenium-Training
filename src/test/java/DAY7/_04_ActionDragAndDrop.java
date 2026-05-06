@@ -10,9 +10,7 @@ public class _04_ActionDragAndDrop {
     public static void main(String[] args) throws InterruptedException {
 
         /*
-
             action.dragAndDropBy(WebElement, x ekseninde taşınacak pixel, y ekseninde taşınacak pixel)
-
         */
 
         driver.get("https://talkerscode.com/webtricks/demo/demo_price-range-slider-using-jquery-css-and-php.php");
@@ -30,7 +28,5 @@ public class _04_ActionDragAndDrop {
         Thread.sleep(5000);
 
         driver.quit();
-
-
     }
 }
