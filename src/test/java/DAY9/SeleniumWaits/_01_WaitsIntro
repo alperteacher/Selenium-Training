@@ -1,0 +1,36 @@
+
+
+Thread.sleep(x) ---> Selenium'a ait bir method değil,
+bu method java'ya ait olan, o an çekirde gerçekleşen
+tüm işlemleri durdurur.
+
+---------------------------------
+
+Ne zaman Selenium Waits ler kullanılır?
+
+1- Elementin HTML de olmama durumu.
+2- Elementin HTML'de var olup, görünür olmamas durumu
+3- Elementin HTML'de var olma ama tıklanabilinir olmamama durumu
+
+----------------- BASIC PAGE LOAD -----------------
+driver.manage().timeouts().pageLoadTimeout()
+
+- Verilen saniye içerisinde sayfa yüklenmezse, hata verir.
+- Bu kullanmılmazsa sayfayı sonsuza kadar yüklemeye çalışır.
+- İşlem gerçekleştiğinde kalan süreyi kullanmıyor
+
+----------------- Implicity Wait -----------------
+
+(Genel WebElementler için)
+
+driver.manage().timeouts().impilictlyWait()
+
+- Web elementlerin findElement ile bulunmaya çalışması için verilen süre.
+- Tüm elementler için geçerlidir, bir kez yazılır.
+- Locator'ı DOM'da bulmaya çalışma süresi de diyebiliriz.
+- İşlem gerçekleştiğinde kalan süreyi kullanmaz
+
+----------------- Explicit Wait -----------------
+
+WebDriverWait
+
