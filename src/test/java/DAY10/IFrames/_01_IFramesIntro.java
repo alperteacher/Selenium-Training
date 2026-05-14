@@ -22,7 +22,7 @@ public class _01_IFramesIntro {
 
         driver.get("https://demo.automationtesting.in/Frames.html");
 
-        WebElement iframe = driver.findElement(By.cssSelector("[name=\"SingleFrame\"]"));
+        WebElement iframe = driver.findElement(By.cssSelector("[src=\"SingleFrame.html\"]"));
 
         driver.switchTo().frame(iframe);
 
